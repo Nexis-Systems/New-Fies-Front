@@ -6,7 +6,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="icon" href="favicon.ico">
-        <title>Nexis | Call Detail Records</title>
+        <title>Nexis | Survey Reports</title>
         <!-- Simple bar CSS -->
         <link rel="stylesheet" href="css/simplebar.css">
         <!-- Fonts CSS -->
@@ -198,20 +198,16 @@
               </ul>
             </nav>
           </aside>
-          <main  role="main" class="main-content">
-            <div class="card ml-3 mr-3 py-2 px-2">
+          <main role="main" class="main-content">
+            <div class="col-md-12  card shadow py-4 mr-3 ml-3">
               <form action="">
                   <div class="row">
-                    <div class="form-group col-md-3">
+                    <div class="form-group col-md-4">
                       <label for="simple-select2">Choose Search Option</label>
                       <select class="form-control select2" id="simple-select2">
                         <optgroup label="Search options">
-                          <option value="">Number</option>
                           <option value="">Date</option>
-                          <option value="">Disposition</option>
-                          <option value="">Bill / Sec</option>
-                          <option value="">Duration</option>
-                          <option value="">Response</option>
+                          <option value="">Survey</option>
                         </optgroup>
                       </select>
                     </div>
@@ -219,111 +215,55 @@
                       <label for="simple-select2">Enter Search Phrase</label>
                       <input type="text" name="" id="" placeholder="search..." class="form-control">
                     </div>
-
                   </div>
                 </form>
               </div>
               <br>
-                  
-
-                    <div class="col-md-12 mb-4">
+                    <div class="col-md-12 mb-4 ">
                       <ul class="nav nav-pills" id="pills-tab2" role="tablist">
                         <li class="nav-item">
-                          <a class="nav-link px-3 active" id="pills-home-tab2" data-toggle="pill" href="#calls" role="tab" aria-controls="pills-home2" aria-selected="true"><span class="fe fe-16 fe-smartphone"></span> Calls</a>
+                          <a class="nav-link px-3 active" id="pills-home-tab2" data-toggle="pill" href="#surveyResult" role="tab" aria-controls="pills-home2" aria-selected="true"><span class="fe fe-16 fe-smartphone"></span> Survey Result</a>
                         </li>
                           <li class="nav-item">
-                            <a class="nav-link px-3" id="pills-contact-tab2" data-toggle="pill" href="#dailyReport" role="tab" aria-controls="pills-contact" aria-selected="false"><span class="fe fe-16 fe-bar-chart-2"></span> Daily Report</a>
+                            <a class="nav-link px-3" id="pills-contact-tab2" data-toggle="pill" href="#surveyCalls" role="tab" aria-controls="pills-contact" aria-selected="false"><span class="fe fe-16 fe-bar-chart-2"></span> Survey Calls</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link px-3" id="pills-contact-tab2" data-toggle="pill" href="#q850Report" role="tab" aria-controls="pills-contact" aria-selected="false"><span class="fe fe-16 fe-bar-chart"></span> Q850 Report</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link px-3" id="pills-contact-tab2" data-toggle="pill" href="#alegReport" role="tab" aria-controls="pills-contact" aria-selected="false"><span class="fe fe-16 fe-bar-chart"></span> A-Leg Hourly Report</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link px-3" id="pills-contact-tab2" data-toggle="pill" href="#transferReport" role="tab" aria-controls="pills-contact" aria-selected="false"><span class="fe fe-16 fe-bar-chart"></span>Transfer Hourly Report</a>
+                            <a class="nav-link px-3" id="pills-contact-tab2" data-toggle="pill" href="#dailyCallReport" role="tab" aria-controls="pills-contact" aria-selected="false"><span class="fe fe-16 fe-bar-chart"></span> Survey Daily Call Report</a>
                           </li>
                       </ul>
                       <div class="tab-content mb-2" id="pills-tabContent2">
-                        <div class="tab-pane fade show active" id="calls" role="tabpanel">
+                        <div class="tab-pane fade show active" id="surveyResult" role="tabpanel">
                           <div class="card mb-2 mt-2">
                             <div class="card-body">
                                 <div class="card-header text-center">
-                                    <strong class="card-title">Call Detail Records</strong>
+                                    <strong class="card-title">Survey Call Detail Results</strong>
                                   </div>
                                   <br>
-                                  <table class="table table-hover" id="dataTable-1">
-                                    <thead>
-                                      <tr>
-                                        <th></th>
-                                        <th>Start Date</th>
-                                        <th>Leg</th>
-                                        <th>Caller ID</th>
-                                        <th>Phone</th>
-                                        <th>Campaign</th>
-                                        <th>Gateway</th>
-                                        <th>Bill Duration</th>
-                                        <th>Incr Duration</th>
-                                        <th>Cost</th>
-                                        <th>Dispostion</th>
-                                        <th>Amd Status</th>
-                                      </tr>
-                                    </thead>
-                                    <tbody>
-                                      <tr>
-                                        <td>
-                                          <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input">
-                                            <label class="custom-control-label"></label>
-                                          </div>
-                                        </td>
-                                        <td>test data</td>
-                                        <td>test data</td>
-                                        <td>test data</td>
-                                        <td>test data</td>
-                                        <td>test data</td>
-                                        <td>test data</td>
-                                        <td>test data</td>
-                                        <td>test data</td>
-                                        <td>test data</td>
-                                        <td>test data</td>
-                                        <td>test data</td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
+                                  <div class="text-center">
+                                      <h1>Lorem</h1>
+                                  </div>
                             </div>
                           </div>
                         </div>
-                          <div class="tab-pane fade show" id="dailyReport" role="tabpanel">
+                          <div class="tab-pane fade show" id="surveyCalls" role="tabpanel">
                             <div class="card mb-2 mt-2">
                                 <div class="card-body">
                                     <div class="card-header text-center">
-                                        <strong class="card-title">Call Detail Summary</strong>
+                                        <strong class="card-title">Survey Call Detail Records</strong>
                                       </div>
                                       <br>
                                       <table class="table table-hover" id="dataTable-1">
                                         <thead>
                                           <tr>
-                                            <th></th>
                                             <th>Date</th>
+                                            <th>Bill Sec</th>
+                                            <th>Graphical Comparison</th>
                                             <th>Calls</th>
-                                            <th>Bill Duration</th>
-                                            <th>Incr Duration</th>
-                                            <th>Graphical Comparison (Bill Dur)</th>
-                                            <th>ALOC</th>
-                                            <th>Cost</th>
+                                            <th>ACT</th>
                                           </tr>
                                         </thead>
                                         <tbody>
                                           <tr>
-                                            <td>
-                                              <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input">
-                                                <label class="custom-control-label"></label>
-                                              </div>
-                                            </td>
-                                            <td>test data</td>
-                                            <td>test data</td>
                                             <td>test data</td>
                                             <td>test data</td>
                                             <td>test data</td>
@@ -335,34 +275,25 @@
                                 </div>
                             </div>
                           </div>
-                        <div class="tab-pane fade show" id="q850Report" role="tabpanel">
+                        <div class="tab-pane fade show" id="dailyCallReport" role="tabpanel">
                             <div class="card mb-2 mt-2">
                                 <div class="card-body">
                                     <div class="card-header text-center">
-                                        <strong class="card-title">Q850 Report Summary</strong>
+                                        <strong class="card-title">Call Detail Report Summary</strong>
                                       </div>
                                       <br>
                                       <table class="table table-hover" id="dataTable-1">
                                         <thead>
                                           <tr>
-                                            <th></th>
-                                            <th>Hangup Cause</th>
-                                            <th>Calls</th>
-                                            <th>Bill Duration</th>
-                                            <th>Incr Duration</th>
-                                            <th>Graphical Comparison (Bill Dur)</th>
-                                            <th>Cost</th>
+                                            <th>Date</th>
+                                            <th>Destination</th>
+                                            <th>Bill Sec</th>
+                                            <th>Disposition</th>
+                                            <th>Survey Result</th>
                                           </tr>
                                         </thead>
                                         <tbody>
                                           <tr>
-                                            <td>
-                                              <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input">
-                                                <label class="custom-control-label"></label>
-                                              </div>
-                                            </td>
-                                            <td>test data</td>
                                             <td>test data</td>
                                             <td>test data</td>
                                             <td>test data</td>
@@ -374,109 +305,6 @@
                                 </div>
                             </div>
                           </div>
-
-                          <div class="tab-pane fade show" id="alegReport" role="tabpanel">
-                            <div class="card mb-2 mt-2">
-                              <div class="card-body">
-                                  <div class="card-header text-center">
-                                      <strong class="card-title">A-Leg - Hourly Report Summary</strong>
-                                    </div>
-                                    <br>
-                                    <table class="table table-hover" id="dataTable-1">
-                                      <thead>
-                                        <tr>
-                                          <th></th>
-                                          <th>Hours</th>
-                                          <th>Total Calls</th>
-                                          <th>Answered</th>
-                                          <th>Busy</th>
-                                          <th>No Answer</th>
-                                          <th>Failed</th>
-                                          <th>Bill Duration (Min)</th>
-                                          <th>Incr Duration (Min)</th>
-                                          <th>ASR (%)</th>
-                                          <th>ALLOC</th>
-                                          <th>Cost</th>
-                                        </tr>
-                                      </thead>
-                                      <tbody>
-                                        <tr>
-                                          <td>
-                                            <div class="custom-control custom-checkbox">
-                                              <input type="checkbox" class="custom-control-input">
-                                              <label class="custom-control-label"></label>
-                                            </div>
-                                          </td>
-                                          <td>test data</td>
-                                          <td>test data</td>
-                                          <td>test data</td>
-                                          <td>test data</td>
-                                          <td>test data</td>
-                                          <td>test data</td>
-                                          <td>test data</td>
-                                          <td>test data</td>
-                                          <td>test data</td>
-                                          <td>test data</td>
-                                          <td>test data</td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="tab-pane fade show" id="transferReport" role="tabpanel">
-                            <div class="card mb-2 mt-2">
-                              <div class="card-body">
-                                  <div class="card-header text-center">
-                                      <strong class="card-title">Xfer - Hourly Report Summary</strong>
-                                    </div>
-                                    <br>
-                                    <table class="table table-hover" id="dataTable-1">
-                                      <thead>
-                                        <tr>
-                                          <th></th>
-                                          <th>Hours</th>
-                                          <th>Total Calls</th>
-                                          <th>Answered</th>
-                                          <th>Busy</th>
-                                          <th>No Answer</th>
-                                          <th>Failed</th>
-                                          <th>Bill Duration (Min)</th>
-                                          <th>Incr Duration (Min)</th>
-                                          <th>ASR (%)</th>
-                                          <th>ALLOC</th>
-                                          <th>Cost</th>
-                                        </tr>
-                                      </thead>
-                                      <tbody>
-                                        <tr>
-                                          <td>
-                                            <div class="custom-control custom-checkbox">
-                                              <input type="checkbox" class="custom-control-input">
-                                              <label class="custom-control-label"></label>
-                                            </div>
-                                          </td>
-                                          <td>test data</td>
-                                          <td>test data</td>
-                                          <td>test data</td>
-                                          <td>test data</td>
-                                          <td>test data</td>
-                                          <td>test data</td>
-                                          <td>test data</td>
-                                          <td>test data</td>
-                                          <td>test data</td>
-                                          <td>test data</td>
-                                          <td>test data</td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                              </div>
-                            </div>
-                          </div>
-                       
-                       
-                       
-                        
                        
                     </div>
                     </div>

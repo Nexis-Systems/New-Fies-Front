@@ -6,7 +6,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="icon" href="favicon.ico">
-        <title>Nexis | Contacts</title>
+        <title>Nexis | Webhook</title>
         <!-- Simple bar CSS -->
         <link rel="stylesheet" href="css/simplebar.css">
         <!-- Fonts CSS -->
@@ -199,62 +199,66 @@
             </nav>
           </aside>
           <main role="main" class="main-content">
-            <div class="row my-0 mx-0">
-              <div class="col auto">
-                    
-                      <div class="form-row">
-                        <div class="form-group col-auto mr-auto">
-                          <label class="ml-3 mr-2 sr-only" for="inlineFormCustomSelectPref1">Show</label>
-                          <label for="search" class="sr-only">Search</label>
-                          <input type="text" class="form-control" id="search1" value="" placeholder="Search">
-                        </div>
-                      </div>
-                    
-              </div>
-              <div class="col-auto">
-                <a href="./add-contacts.html" class="btn btn-primary"><span class="fe fe-plus fe-12 mr-2"></span>Add</a>
-              </div>
-            </div>
-            <div class="card shadow ml-3 mr-3 ">
-              <table class="table table-hover" id="dataTable-1">
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <th>Contact</th>
-                      <th>Full Name / IVR</th>
-                      <th>Offset</th>
-                      <th>Timezone</th>
-                      <th>Disposition</th>
-                      <th>Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input">
-                          <label class="custom-control-label"></label>
-                        </div>
-                      </td>
-                      <td>test data</td>
-                      <td>test data</td>
-                      <td>test data</td>
-                      <td>test data</td>
-                      <td>test data</td>
-                      
-                      <td><button class="btn btn-sm dropdown-toggle more-horizontal" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <span class="text-muted sr-only">Action</span>
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-right">
-                          <a class="dropdown-item" href="#"><i class="fe fe-edit fe-16"></i> Edit Contact</a>
-                          <a class="dropdown-item" href="#"><i class="fe fe-trash fe-16"></i> Delete Contact</a>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+            <div class="row ml-3 mr-3 ">
+                <div class="col-md-3 mt-1 mb-1 card shadow mr-2 ">
+                  <div class="form-group mb-3">
+                      <label class="mt-2"><b>Select Campaign</b> </label>
+                      <select name="" id="" class="form-control">
+                          <option selected>Campaign details</option>
+                          <option value="1">Campaign details</option>
+                      </select>
+                    </div>
                 </div>
-            </main>
+                <div class="col-md-3 mt-1 mb-1 card shadow mr-2 ">
+                  <div class="form-group mb-3">
+                      <label class="mt-2"><b>Type</b> </label>
+                      <select name="" id="" class="form-control">
+                          <option selected>All</option>
+                          <option selected>CDR</option>
+                          <option selected>IVR</option>
+                      </select>
+                    </div>
+                </div>
+                <div class="col-md-3 mt-1 mb-1 card shadow mr-2 ">
+                  <div class="form-group mb-3">
+                      <label class="mt-2"><b>Date</b> </label>
+                    <input type="date" name="" id="" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <br>
+            
+          <div class="card shadow ml-3 mr-3 ">
+            <table class="table table-hover" id="dataTable-1">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Campaign</th>
+                    <th>Type</th>
+                    <th>Status</th>
+                    <th>Attempts</th>
+                    <th>Result</th>
+                    <th>API URL</th>
+                    <th>Method</th>
+                    <th>Notified</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>test data</td>
+                    <td>test data</td>
+                    <td>test data</td>
+                    <td>test data</td>
+                    <td>test data</td>
+                    <td>test data</td>
+                    <td>test data</td>
+                    <td>test data</td>
+                    <td>test data</td>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+          </main>
     </div>
 
 

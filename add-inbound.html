@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="favicon.ico">
+        <title>Nexis | Add Inbound</title>
+        <!-- Simple bar CSS -->
+        <link rel="stylesheet" href="css/simplebar.css">
+        <!-- Fonts CSS -->
+        <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- Icons CSS -->
+        <link rel="stylesheet" href="css/feather.css">
+        <link rel="stylesheet" href="css/select2.css">
+        <link rel="stylesheet" href="css/dropzone.css">
+        <link rel="stylesheet" href="css/uppy.min.css">
+        <link rel="stylesheet" href="css/jquery.steps.css">
+        <link rel="stylesheet" href="css/jquery.timepicker.css">
+        <link rel="stylesheet" href="css/quill.snow.css">
+        <!-- Date Range Picker CSS -->
+        <link rel="stylesheet" href="css/daterangepicker.css">
+        <!-- App CSS -->
+        <link rel="stylesheet" href="css/app-light.css" id="lightTheme">
+      </head>
+    <body class="vertical light">
+    <div class="wrapper">
+        <nav class="topnav navbar navbar-light">
+            <button type="button" class="navbar-toggler text-muted mt-2 p-0 mr-3 collapseSidebar">
+              <i class="fe fe-menu navbar-toggler-icon"></i>
+            </button>
+            <ul class="nav">
+              <li class="nav-item nav-notif">
+                <a class="nav-link text-muted my-2" href="./#" data-toggle="modal" data-target=".modal-notif">
+                  <span class="fe fe-bell fe-16"></span>
+                  <span class="dot dot-md bg-success"></span>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link text-muted pr-0" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="avatar avatar-sm mt-2">
+                    <img src="./img/avatar.png" alt="..." class="avatar-img rounded-circle">
+                  </span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                  <a href="./profile.html" class="dropdown-item">
+                    <i class="fe fe-user fe-16"></i>
+                    <span class="ml-3 item-text">Profile</span>
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    <i class="fe fe-power fe-16"></i>
+                    <span class="ml-3 item-text">Logout</span>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <aside class="sidebar-left border-right bg-white shadow" id="leftSidebar" data-simplebar>
+            <a href="#" class="btn collapseSidebar toggle-btn d-lg-none text-muted ml-2 mt-3" data-toggle="toggle">
+              <i class="fe fe-x"><span class="sr-only"></span></i>
+            </a>
+            <nav class="vertnav navbar navbar-light">
+              <!-- nav bar -->
+              <div class="w-100 mb-4 d-flex">
+                <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="./index.html">
+                  <img src="./img/avatar.png" alt="..." class="avatar-img rounded-circle" style="width: 60px; height: 60px;"> 
+                </a>
+              </div>
+              <ul class="navbar-nav flex-fill w-100 mb-2">
+                <li class="nav-item w-100">
+                  <a class="nav-link" href="./dashboard.html">
+                    <i class="fe fe-home fe-16"></i>
+                    <span class="ml-3 item-text">Dashboard</span>
+                  </a>
+                </li>
+              </ul>
+              <ul class="navbar-nav flex-fill w-100 mb-2">
+                <li class="nav-item dropdown">
+                  <a href="#contacts" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+                    <i class="fe fe-book fe-16"></i>
+                    <span class="ml-3 item-text">Contacts</span>
+                  </a>
+                  <ul class="collapse list-unstyled pl-4 w-100" id="contacts">
+                    <li class="nav-item">
+                      <a class="nav-link pl-3" href="./phonebooks.html"><span class="ml-1 item-text">Phonebooks</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link pl-3" href="./contacts.html"><span class="ml-1 item-text">Contacts</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link pl-3" href="./import-contacts.html"><span class="ml-1 item-text">Import Contacts</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#audios" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+                    <i class="fe fe-music fe-16"></i>
+                    <span class="ml-3 item-text">Manage Audio</span>
+                  </a>
+                  <ul class="collapse list-unstyled pl-4 w-100" id="audios">
+                    <li class="nav-item">
+                      <a class="nav-link pl-3" href="./audio.html"><span class="ml-1 item-text">Upload Audio</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link pl-3" href="./text-to-speech.html"><span class="ml-1 item-text">Text To Speech</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#campaigns" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+                    <i class="fe fe-send fe-16"></i>
+                    <span class="ml-3 item-text">Campaigns</span>
+                  </a>
+                  <ul class="collapse list-unstyled pl-4 w-100" id="campaigns">
+                    <li class="nav-item">
+                      <a class="nav-link pl-3" href="./voice-campaign.html"><span class="ml-1 item-text">Voice Campaign</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link pl-3" href="./sms-campaign.html"><span class="ml-1 item-text">SMS Campaign</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#inbound" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+                      <i class="fe fe-arrow-down-left fe-16"></i>
+                      <span class="ml-3 item-text">Inbound</span>
+                    </a>
+                    <ul class="collapse list-unstyled pl-4 w-100" id="inbound">
+                      <li class="nav-item">
+                        <a class="nav-link pl-3" href="./did.html"><span class="ml-1 item-text">DID</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link pl-3" href="./inbound.html"><span class="ml-1 item-text">Inbound Campaign</span></a>
+                      </li>
+                    </ul>
+                  </li>
+                <li class="nav-item dropdown">
+                  <a href="#reports" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+                    <i class="fe fe-activity fe-16"></i>
+                    <span class="ml-3 item-text">Reports</span>
+                  </a>
+                  <ul class="collapse list-unstyled pl-4 w-100" id="reports">
+                    <li class="nav-item">
+                      <a class="nav-link pl-3" href="./call-detail-records.html"><span class="ml-1 item-text">Call Detail Reports</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pl-3" href="./survey-reports.html"><span class="ml-1 item-text">Surveys</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link pl-3" href="./compare-campaigns.html"><span class="ml-1 item-text">Compare Campaigns</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link pl-3" href="./hourly-campaign-stats.html"><span class="ml-1 item-text">Hourly Campaign Stats</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link pl-3" href="./campaign-summary.html"><span class="ml-1 item-text">Campaign Summary</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link pl-3" href="./recording-report.html"><span class="ml-1 item-text">Recording Report</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link pl-3" href="./subscriber.html"><span class="ml-1 item-text">Subscriber</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link pl-3" href="./disposition.html"><span class="ml-1 item-text">Disposition</span></a>
+                      </li>
+                    <li class="nav-item">
+                      <a class="nav-link pl-3" href="./sms-reports.html"><span class="ml-1 item-text">SMS Report</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pl-3" href="./webhook.html"><span class="ml-1 item-text">Webhook Report</span></a>
+                      </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#billings" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+                    <i class="fe fe-credit-card fe-16"></i>
+                    <span class="ml-3 item-text">Billing</span>
+                  </a>
+                  <ul class="collapse list-unstyled pl-4 w-100" id="billings">
+                    <li class="nav-item">
+                      <a class="nav-link pl-3" href="./invoices.html"><span class="ml-1 item-text">Invoices</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link pl-3" href="./statements.html"><span class="ml-1 item-text">Statements</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item w-100">
+                  <a class="nav-link" href="./survey.html">
+                    <i class="fe fe-smartphone fe-16"></i>
+                    <span class="ml-3 item-text">Survey</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </aside>
+          <main role="main" class="main-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 mb-4">
+                      <ul class="nav nav-pills" id="pills-tab2" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link px-3 active" id="pills-home-tab2" data-toggle="pill" href="#general" role="tab" aria-controls="pills-home2" aria-selected="true"><span class="fe fe-16 fe-settings"></span> General</a>
+                        </li>
+                          <li class="nav-item">
+                            <a class="nav-link px-3" id="pills-contact-tab2" data-toggle="pill" href="#schedulle" role="tab" aria-controls="pills-contact" aria-selected="false"><span class="fe fe-16 fe-clock"></span> Schedulle</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link px-3" id="pills-contact-tab2" data-toggle="pill" href="#extra" role="tab" aria-controls="pills-contact" aria-selected="false"><span class="fe fe-16 fe-alert-circle"></span> Extra</a>
+                          </li>
+                      </ul>
+                      <div class="tab-content mb-2" id="pills-tabContent2">
+                        <div class="tab-pane fade show active" id="general" role="tabpanel">
+                          <div class="card mb-2 mt-2">
+                            <div class="card-body">
+                                <div class="card-header">
+                                    <strong class="card-title">General Settings</strong>
+                                  </div>
+                                  <br>
+                                <form action="">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group mb-3">
+                                                <label><b>Campaign Name</b> </label>
+                                                <input type="text" id="simpleinput" class="form-control">
+                                              </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group mb-3">
+                                                <label><b>Maximum Call Duration</b> </label>
+                                                <input type="number" id="simpleinput" class="form-control">
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group mb-3">
+                                                <label><b>Application</b> </label>
+                                                <select class="form-control select2" id="simple-select2">
+                                                    <optgroup label="Template">
+                                                      <option>survey template</option>
+                                                      <option>survey template</option>
+                                                    </optgroup>
+                                                  </select>
+                                              </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group mb-3">
+                                                <label><b>Play Audio File</b> </label>
+                                                <select class="form-control select2" id="simple-select2">
+                                                    <optgroup label="Template">
+                                                      <option>Audio File</option>
+                                                      <option>Audio File</option>
+                                                    </optgroup>
+                                                  </select>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group mb-3">
+                                                <label><b>Route</b> </label>
+                                                <select class="form-control select2" id="simple-select2">
+                                                    <optgroup label="Route">
+                                                      <option>Route 1</option>
+                                                      <option>Route 2</option>
+                                                    </optgroup>
+                                                  </select>
+                                              </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group mb-3">
+                                                <label><b>Plays Text To Speech</b> </label>
+                                                <textarea class="form-control" name="" id=""rows="4"></textarea>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group mb-3">
+                                                <label><b>Transfer Gateway</b> </label>
+                                                <select class="form-control select2" id="simple-select2">
+                                                    <optgroup label="gateway">
+                                                      <option>Gateway name</option>
+                                                      <option>Gateway name</option>
+                                                    </optgroup>
+                                                  </select>
+                                              </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group mb-3">
+                                                <label><b>Transfer Number</b> </label>
+                                                <input type="text" id="simpleinput" class="form-control">
+                                              </div>
+                                        </div>
+                                    </div>
+                                      <br>
+                                      <div class="text-center">
+                                          <button class="btn btn-primary"><i class="fe fe-save"></i> Save General Settings</button>
+                                      </div>
+                                </form>
+                            </div>
+                          </div>
+                        </div>
+                          <div class="tab-pane fade show" id="schedulle" role="tabpanel">
+                            <div class="card mb-2 mt-2">
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <strong class="card-title">Schedule Settings</strong>
+                                      </div>
+                                      <br>
+                                    <form action="">
+                                        <div class="row">
+                                              <div class="col-md-4">
+                                                <div class="form-group mb-3">
+                                                    <label><b>Monday</b> </label>
+                                                    <div class="custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input" id="mondaySwitch">
+                                                        <label class="custom-control-label" for="mondaySwitch">set state</label>
+                                                      </div>
+                                                </div>
+                                              </div>
+                                              <div class="col-md-4">
+                                                <div class="form-group mb-3">
+                                                    <label><b>Tuesday</b> </label>
+                                                    <div class="custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input" id="tuesdaySwitch">
+                                                        <label class="custom-control-label" for="tuesdaySwitch">set state</label>
+                                                      </div>
+                                                </div>
+                                              </div>
+                                              <div class="col-md-4">
+                                                <div class="form-group mb-3">
+                                                    <label><b>Wednesday</b> </label>
+                                                    <div class="custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input" id="wednesdaySwitch">
+                                                        <label class="custom-control-label" for="wednesdaySwitch">set state</label>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group mb-3">
+                                                    <label><b>Thursday</b> </label>
+                                                    <div class="custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input" id="thursdaySwitch">
+                                                        <label class="custom-control-label" for="thursdaySwitch">set state</label>
+                                                      </div>
+                                                </div>
+                                              </div>
+                                              <div class="col-md-4">
+                                                <div class="form-group mb-3">
+                                                    <label><b>Friday</b> </label>
+                                                    <div class="custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input" id="fridaySwitch">
+                                                        <label class="custom-control-label" for="fridaySwitch">set state</label>
+                                                      </div>
+                                                </div>
+                                              </div>
+                                              <div class="col-md-4">
+                                                <div class="form-group mb-3">
+                                                    <label><b>Saturday</b> </label>
+                                                    <div class="custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input" id="saturdaySwitch">
+                                                        <label class="custom-control-label" for="saturdaySwitch">set state</label>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-md-6">
+                                              <div class="form-group mb-3">
+                                                <label><b>Start Time</b> </label>
+                                                <div class="input-group">
+                                                    <input type="time" class="form-control drgpicker" >
+                                                  </div>
+                                              </div>
+                                            </div> <!-- /.col -->
+                                            <div class="col-md-6">
+                                                <div class="form-group mb-3">
+                                                    <label><b>Finish Time</b> </label>
+                                                    <input type="time" class="form-control drgpicker" >
+                                                </div>
+                                              </div> <!-- /.col -->
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-md-6">
+                                              <div class="form-group mb-3">
+                                                <label><b>Unavailable Audio File</b> </label>
+                                                <select class="form-control select2" id="simple-select2">
+                                                    <optgroup label="audio list">
+                                                      <option>Audio name</option>
+                                                      <option>Audio name</option>
+                                                    </optgroup>
+                                                  </select>
+                                              </div>
+                                            </div> <!-- /.col -->
+                                          </div>
+                                          <br>
+                                          <div class="text-center">
+                                              <button class="btn btn-primary"><i class="fe fe-save"></i> Save Schedulle Settings</button>
+                                          </div>
+                                    </form>
+                                </div>
+                            </div>
+                          </div>
+                        <div class="tab-pane fade show" id="extra" role="tabpanel">
+                            <div class="card mb-2 mt-2">
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <strong class="card-title">Extra Settings</strong>
+                                      </div>
+                                      <br>
+                                    <form action="">
+                                       
+                                          <div class="row">
+                                            <div class="col-md-6">
+                                              <div class="form-group mb-3">
+                                                <label><b>Sms Gateway</b> </label>
+                                                <select class="form-control select2" id="simple-select2">
+                                                    <optgroup label="Sms Gateway">
+                                                      <option>Gateway name</option>
+                                                      <option>Gateway name</option>
+                                                    </optgroup>
+                                                  </select>
+                                              </div>
+                                            </div> <!-- /.col -->
+                                            <div class="col-md-6">
+                                                <div class="form-group mb-3">
+                                                    <label><b>Text-to-Speech Language</b> </label>
+                                                    <select class="form-control select2" id="simple-select2">
+                                                        <optgroup label="TTS Language">
+                                                          <option>Language</option>
+                                                          <option>Language</option>
+                                                        </optgroup>
+                                                      </select>
+                                                </div>
+                                              </div> <!-- /.col -->
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-md-6">
+                                              <div class="form-group mb-3">
+                                                <label><b>Caller ID Number</b> </label>
+                                                <input type="text" id="simpleinput" class="form-control">
+                                              </div>
+                                            </div> <!-- /.col -->
+                                            <div class="col-md-6">
+                                                <div class="form-group mb-3">
+                                                    <label><b>Caller Name</b> </label>
+                                                    <input type="text" id="simpleinput" class="form-control">
+                                                </div>
+                                              </div> <!-- /.col -->
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-md-6">
+                                              <div class="form-group mb-3">
+                                                <label><b>Call Center Config</b> </label>
+                                                <select class="form-control select2" id="simple-select2">
+                                                    <optgroup label="Call Center Config">
+                                                      <option>Config 1</option>
+                                                      <option>Config 2</option>
+                                                    </optgroup>
+                                                  </select>
+                                              </div>
+                                            </div> <!-- /.col -->
+                                            <div class="col-md-6">
+                                                <div class="form-group mb-3">
+                                                    <label><b>DNC List</b> </label>
+                                                    <select class="form-control select2" id="simple-select2">
+                                                        <optgroup label="Dnc List">
+                                                          <option>List 1</option>
+                                                          <option>List 2</option>
+                                                        </optgroup>
+                                                      </select>
+                                                </div>
+                                              </div> <!-- /.col -->
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group mb-3">
+                                                    <label><b>Lookup Phonebook</b> </label>
+                                                    <select class="form-control select2" id="simple-select2">
+                                                        <optgroup label="Phonebook List">
+                                                          <option>phonebook 1</option>
+                                                          <option>phonebook 2</option>
+                                                        </optgroup>
+                                                      </select>
+                                                </div>
+                                              </div> <!-- /.col -->
+                                              <div class="col-md-4">
+                                                <div class="form-group mb-3">
+                                                    <label><b>Record B-Leg</b> </label>
+                                                    <div class="custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input" id="legSwitch">
+                                                        <label class="custom-control-label" for="legSwitch">Enable recording of the transferred leg of the call</label>
+                                                      </div>
+                                                </div>
+                                              </div>
+                                              <div class="col-md-4">
+                                                <div class="form-group mb-3">
+                                                    <label><b>Record Call</b> </label>
+                                                    <div class="custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input" id="recordSwitch">
+                                                        <label class="custom-control-label" for="recordSwitch">Enable recording of the entire call</label>
+                                                      </div>
+                                                </div>
+                                              </div>
+                                             
+                                          </div>
+                                          <br>
+                                          <div class="text-center">
+                                              <button class="btn btn-primary"><i class="fe fe-save"></i> Save Extra Settings</button>
+                                          </div>
+                                    </form>
+                                </div>
+                            </div>
+                          </div>
+                       
+                       
+                       
+                        
+                       
+                    </div>
+                    </div>
+                  </div> <!-- end section -->
+              </div>
+            </main>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/simplebar.min.js"></script>
+    <script src='js/daterangepicker.js'></script>
+    <script src='js/jquery.stickOnScroll.js'></script>
+    <script src="js/tinycolor-min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/d3.min.js"></script>
+    <script src="js/topojson.min.js"></script>
+    <script src="js/datamaps.all.min.js"></script>
+    <script src="js/datamaps-zoomto.js"></script>
+    <script src="js/datamaps.custom.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script>
+      /* defind global options */
+      Chart.defaults.global.defaultFontFamily = base.defaultFontFamily;
+      Chart.defaults.global.defaultFontColor = colors.mutedColor;
+    </script>
+    <script src="js/gauge.min.js"></script>
+    <script src="js/jquery.sparkline.min.js"></script>
+    <script src="js/apexcharts.min.js"></script>
+    <script src="js/apexcharts.custom.js"></script>
+    <script src="js/apps.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-56159088-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag()
+      {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'UA-56159088-1');
+    </script>
+</body>
+</html>

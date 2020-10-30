@@ -22,10 +22,9 @@
         <!-- Date Range Picker CSS -->
         <link rel="stylesheet" href="css/daterangepicker.css">
         <!-- App CSS -->
-        <link rel="stylesheet" href="css/app-light.css" id="lightTheme" disabled>
-        <link rel="stylesheet" href="css/app-dark.css" id="darkTheme" >
+        <link rel="stylesheet" href="css/app-light.css" id="lightTheme">
       </head>
-    <body class="vertical">
+    <body class="vertical light">
     <div class="wrapper">
         <nav class="topnav navbar navbar-light">
             <button type="button" class="navbar-toggler text-muted mt-2 p-0 mr-3 collapseSidebar">
@@ -76,7 +75,6 @@
                   </a>
                 </li>
               </ul>
-              
               <ul class="navbar-nav flex-fill w-100 mb-2">
                 <li class="nav-item dropdown">
                   <a href="#contacts" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
@@ -97,6 +95,21 @@
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
+                  <a href="#audios" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+                    <i class="fe fe-music fe-16"></i>
+                    <span class="ml-3 item-text">Manage Audio</span>
+                  </a>
+                  <ul class="collapse list-unstyled pl-4 w-100" id="audios">
+                    <li class="nav-item">
+                      <a class="nav-link pl-3" href="./audio.html"><span class="ml-1 item-text">Upload Audio</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link pl-3" href="./text-to-speech.html"><span class="ml-1 item-text">Text To Speech</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
                   <a href="#campaigns" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
                     <i class="fe fe-send fe-16"></i>
                     <span class="ml-3 item-text">Campaigns</span>
@@ -111,6 +124,20 @@
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
+                    <a href="#inbound" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+                      <i class="fe fe-arrow-down-left fe-16"></i>
+                      <span class="ml-3 item-text">Inbound</span>
+                    </a>
+                    <ul class="collapse list-unstyled pl-4 w-100" id="inbound">
+                      <li class="nav-item">
+                        <a class="nav-link pl-3" href="./did.html"><span class="ml-1 item-text">DID</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link pl-3" href="./inbound.html"><span class="ml-1 item-text">Inbound Campaign</span></a>
+                      </li>
+                    </ul>
+                  </li>
+                <li class="nav-item dropdown">
                   <a href="#reports" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
                     <i class="fe fe-activity fe-16"></i>
                     <span class="ml-3 item-text">Reports</span>
@@ -120,8 +147,32 @@
                       <a class="nav-link pl-3" href="./call-detail-records.html"><span class="ml-1 item-text">Call Detail Reports</span></a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link pl-3" href="./survey-reports.html"><span class="ml-1 item-text">Surveys</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link pl-3" href="./compare-campaigns.html"><span class="ml-1 item-text">Compare Campaigns</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link pl-3" href="./hourly-campaign-stats.html"><span class="ml-1 item-text">Hourly Campaign Stats</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link pl-3" href="./campaign-summary.html"><span class="ml-1 item-text">Campaign Summary</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link pl-3" href="./recording-report.html"><span class="ml-1 item-text">Recording Report</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link pl-3" href="./subscriber.html"><span class="ml-1 item-text">Subscriber</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link pl-3" href="./disposition.html"><span class="ml-1 item-text">Disposition</span></a>
+                      </li>
+                    <li class="nav-item">
                       <a class="nav-link pl-3" href="./sms-reports.html"><span class="ml-1 item-text">SMS Report</span></a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link pl-3" href="./webhook.html"><span class="ml-1 item-text">Webhook Report</span></a>
+                      </li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -144,23 +195,76 @@
                     <span class="ml-3 item-text">Survey</span>
                   </a>
                 </li>
-                <li class="nav-item w-100">
-                  <a class="nav-link" href="./audio.html">
-                    <i class="fe fe-music fe-16"></i>
-                    <span class="ml-3 item-text">Audio</span>
-                  </a>
-                </li>
               </ul>
             </nav>
           </aside>
           <main role="main" class="main-content">
-            <div class="container-fluid">
-              <div class="row justify-content-center">
-                <div class="col-12">
-            
-              </div> <!-- / .row -->
-                </div>
+            <div class="row my-0 mx-0">
+              <div class="col auto">
+                <div class="form-row">
+                  <div class="form-group col-auto mr-auto">
+                    <label class="ml-3 mr-2 sr-only" for="inlineFormCustomSelectPref1">Show</label>
+                    <label for="search" class="sr-only">Search</label>
+                    <input type="text" class="form-control" id="search1" value="" placeholder="Search">
+                  </div>
+                </div>  
               </div>
+              <div class="col-auto">
+                <a href="./add-phonebook.html" class="btn btn-primary"><span class="fe fe-download-cloud fe-12 mr-2"></span>Download</a>
+              </div>
+            </div>
+            <div class="card shadow ml-3 mr-3">
+              <table class="table datatables" id="dataTable-1">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Phonebook</th>
+                    <th>Survey</th>
+                    <th>Participants</th>
+                    <th>Contacts</th>
+                    <th>Progress</th>
+                    <th>Calls</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input">
+                        <label class="custom-control-label"></label>
+                      </div>
+                    </td>
+                    <td>test data</td>
+                    <td>test data</td>
+                    <td>test data</td>
+                    <td>test data</td>
+                    <td>test data</td>
+                    <td>test data</td>
+                    <td>test data</td>
+                    <td>test data</td>
+                    <td>test data</td>
+                    <td>test data</td>
+                    
+                    <td><button class="btn btn-sm dropdown-toggle more-horizontal" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="text-muted sr-only">Action</span>
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#"><i class="fe fe-edit fe-16"></i> Edit Campaign</a>
+                        <a class="dropdown-item" href="#"><i class="fe fe-trash fe-16"></i> Delete Campaign</a>
+                        <a class="dropdown-item" href="#"><i class="fe fe-refresh-cw fe-16"></i> Recycle Campaign</a>
+                        <a class="dropdown-item" href="#"><i class="fe fe-phone-call fe-16"></i> Test Call</a>
+                        <a class="dropdown-item" href="#"><i class="fe fe-pie-chart fe-16"></i> Quick Report</a>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+                </div>
             </main>
     </div>
 

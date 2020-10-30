@@ -22,10 +22,9 @@
         <!-- Date Range Picker CSS -->
         <link rel="stylesheet" href="css/daterangepicker.css">
         <!-- App CSS -->
-        <link rel="stylesheet" href="css/app-light.css" id="lightTheme" disabled>
-        <link rel="stylesheet" href="css/app-dark.css" id="darkTheme" >
+        <link rel="stylesheet" href="css/app-light.css" id="lightTheme">
       </head>
-    <body class="vertical">
+    <body class="vertical light">
     <div class="wrapper">
       <nav class="topnav navbar navbar-light">
         <button type="button" class="navbar-toggler text-muted mt-2 p-0 mr-3 collapseSidebar">
@@ -57,108 +56,148 @@
           </li>
         </ul>
       </nav>
-          <aside class="sidebar-left border-right bg-white shadow" id="leftSidebar" data-simplebar>
-            <a href="#" class="btn collapseSidebar toggle-btn d-lg-none text-muted ml-2 mt-3" data-toggle="toggle">
-              <i class="fe fe-x"><span class="sr-only"></span></i>
+      <aside class="sidebar-left border-right bg-white shadow" id="leftSidebar" data-simplebar>
+        <a href="#" class="btn collapseSidebar toggle-btn d-lg-none text-muted ml-2 mt-3" data-toggle="toggle">
+          <i class="fe fe-x"><span class="sr-only"></span></i>
+        </a>
+        <nav class="vertnav navbar navbar-light">
+          <!-- nav bar -->
+          <div class="w-100 mb-4 d-flex">
+            <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="./index.html">
+              <img src="./img/avatar.png" alt="..." class="avatar-img rounded-circle" style="width: 60px; height: 60px;"> 
             </a>
-            <nav class="vertnav navbar navbar-light">
-              <!-- nav bar -->
-              <div class="w-100 mb-4 d-flex">
-                <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="./index.html">
-                  <img src="./img/avatar.png" alt="..." class="avatar-img rounded-circle" style="width: 60px; height: 60px;"> 
+          </div>
+          <ul class="navbar-nav flex-fill w-100 mb-2">
+            <li class="nav-item w-100">
+              <a class="nav-link" href="./dashboard.html">
+                <i class="fe fe-home fe-16"></i>
+                <span class="ml-3 item-text">Dashboard</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="navbar-nav flex-fill w-100 mb-2">
+            <li class="nav-item dropdown">
+              <a href="#contacts" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+                <i class="fe fe-book fe-16"></i>
+                <span class="ml-3 item-text">Contacts</span>
+              </a>
+              <ul class="collapse list-unstyled pl-4 w-100" id="contacts">
+                <li class="nav-item">
+                  <a class="nav-link pl-3" href="./phonebooks.html"><span class="ml-1 item-text">Phonebooks</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link pl-3" href="./contacts.html"><span class="ml-1 item-text">Contacts</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link pl-3" href="./import-contacts.html"><span class="ml-1 item-text">Import Contacts</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#audios" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+                <i class="fe fe-music fe-16"></i>
+                <span class="ml-3 item-text">Manage Audio</span>
+              </a>
+              <ul class="collapse list-unstyled pl-4 w-100" id="audios">
+                <li class="nav-item">
+                  <a class="nav-link pl-3" href="./audio.html"><span class="ml-1 item-text">Upload Audio</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link pl-3" href="./text-to-speech.html"><span class="ml-1 item-text">Text To Speech</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#campaigns" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+                <i class="fe fe-send fe-16"></i>
+                <span class="ml-3 item-text">Campaigns</span>
+              </a>
+              <ul class="collapse list-unstyled pl-4 w-100" id="campaigns">
+                <li class="nav-item">
+                  <a class="nav-link pl-3" href="./voice-campaign.html"><span class="ml-1 item-text">Voice Campaign</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link pl-3" href="./sms-campaign.html"><span class="ml-1 item-text">SMS Campaign</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#inbound" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+                  <i class="fe fe-arrow-down-left fe-16"></i>
+                  <span class="ml-3 item-text">Inbound</span>
                 </a>
-              </div>
-              <ul class="navbar-nav flex-fill w-100 mb-2">
-                <li class="nav-item w-100">
-                  <a class="nav-link" href="./dashboard.html">
-                    <i class="fe fe-home fe-16"></i>
-                    <span class="ml-3 item-text">Dashboard</span>
-                  </a>
+                <ul class="collapse list-unstyled pl-4 w-100" id="inbound">
+                  <li class="nav-item">
+                    <a class="nav-link pl-3" href="./did.html"><span class="ml-1 item-text">DID</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link pl-3" href="./inbound.html"><span class="ml-1 item-text">Inbound Campaign</span></a>
+                  </li>
+                </ul>
+              </li>
+            <li class="nav-item dropdown">
+              <a href="#reports" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+                <i class="fe fe-activity fe-16"></i>
+                <span class="ml-3 item-text">Reports</span>
+              </a>
+              <ul class="collapse list-unstyled pl-4 w-100" id="reports">
+                <li class="nav-item">
+                  <a class="nav-link pl-3" href="./call-detail-records.html"><span class="ml-1 item-text">Call Detail Reports</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link pl-3" href="./survey-reports.html"><span class="ml-1 item-text">Surveys</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link pl-3" href="./compare-campaigns.html"><span class="ml-1 item-text">Compare Campaigns</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link pl-3" href="./hourly-campaign-stats.html"><span class="ml-1 item-text">Hourly Campaign Stats</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link pl-3" href="./campaign-summary.html"><span class="ml-1 item-text">Campaign Summary</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link pl-3" href="./recording-report.html"><span class="ml-1 item-text">Recording Report</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link pl-3" href="./subscriber.html"><span class="ml-1 item-text">Subscriber</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link pl-3" href="./disposition.html"><span class="ml-1 item-text">Disposition</span></a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link pl-3" href="./sms-reports.html"><span class="ml-1 item-text">SMS Report</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link pl-3" href="./webhook.html"><span class="ml-1 item-text">Webhook Report</span></a>
+                  </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#billings" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+                <i class="fe fe-credit-card fe-16"></i>
+                <span class="ml-3 item-text">Billing</span>
+              </a>
+              <ul class="collapse list-unstyled pl-4 w-100" id="billings">
+                <li class="nav-item">
+                  <a class="nav-link pl-3" href="./invoices.html"><span class="ml-1 item-text">Invoices</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link pl-3" href="./statements.html"><span class="ml-1 item-text">Statements</span></a>
                 </li>
               </ul>
-              
-              <ul class="navbar-nav flex-fill w-100 mb-2">
-                <li class="nav-item dropdown">
-                  <a href="#contacts" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                    <i class="fe fe-book fe-16"></i>
-                    <span class="ml-3 item-text">Contacts</span>
-                  </a>
-                  <ul class="collapse list-unstyled pl-4 w-100" id="contacts">
-                    <li class="nav-item">
-                      <a class="nav-link pl-3" href="./phonebooks.html"><span class="ml-1 item-text">Phonebooks</span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link pl-3" href="./contacts.html"><span class="ml-1 item-text">Contacts</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link pl-3" href="./import-contacts.html"><span class="ml-1 item-text">Import Contacts</span></a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a href="#campaigns" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                    <i class="fe fe-send fe-16"></i>
-                    <span class="ml-3 item-text">Campaigns</span>
-                  </a>
-                  <ul class="collapse list-unstyled pl-4 w-100" id="campaigns">
-                    <li class="nav-item">
-                      <a class="nav-link pl-3" href="./voice-campaign.html"><span class="ml-1 item-text">Voice Campaign</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link pl-3" href="./sms-campaign.html"><span class="ml-1 item-text">SMS Campaign</span></a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a href="#reports" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                    <i class="fe fe-activity fe-16"></i>
-                    <span class="ml-3 item-text">Reports</span>
-                  </a>
-                  <ul class="collapse list-unstyled pl-4 w-100" id="reports">
-                    <li class="nav-item">
-                      <a class="nav-link pl-3" href="./call-detail-records.html"><span class="ml-1 item-text">Call Detail Reports</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link pl-3" href="./sms-reports.html"><span class="ml-1 item-text">SMS Report</span></a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a href="#billings" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                    <i class="fe fe-credit-card fe-16"></i>
-                    <span class="ml-3 item-text">Billing</span>
-                  </a>
-                  <ul class="collapse list-unstyled pl-4 w-100" id="billings">
-                    <li class="nav-item">
-                      <a class="nav-link pl-3" href="./invoices.html"><span class="ml-1 item-text">Invoices</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link pl-3" href="./statements.html"><span class="ml-1 item-text">Statements</span></a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item w-100">
-                  <a class="nav-link" href="./survey.html">
-                    <i class="fe fe-smartphone fe-16"></i>
-                    <span class="ml-3 item-text">Survey</span>
-                  </a>
-                </li>
-                <!-- <li class="nav-item">
-                  <a href="dashboard.html" data-toggle="collapse" aria-expanded="false" class="nav-link">
-                    <i class="fe fe-activity fe-16"></i>
-                    <span class="ml-3 item-text">Analytics</span>
-                  </a>
-                </li> -->
-                <li class="nav-item w-100">
-                  <a class="nav-link" href="./audio.html">
-                    <i class="fe fe-music fe-16"></i>
-                    <span class="ml-3 item-text">Audio</span>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </aside>
+            </li>
+            <li class="nav-item w-100">
+              <a class="nav-link" href="./survey.html">
+                <i class="fe fe-smartphone fe-16"></i>
+                <span class="ml-3 item-text">Survey</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
           <main role="main" class="main-content">
             <div class="container-fluid">
               <div class="row justify-content-center">
@@ -247,7 +286,7 @@
                   </div>
 
                         <!-- info small box -->
-              <div class="row">
+              <div class="row ml-1 mr-1">
                 <div class="col-md-4">
                   <div class="card shadow mb-4">
                     <div class="card-body">
