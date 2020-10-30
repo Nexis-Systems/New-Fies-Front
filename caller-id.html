@@ -6,21 +6,14 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="icon" href="favicon.ico">
-        <title>Nexis | Add Contact</title>
+        <title>Nexis | Caller IDs</title>
         <!-- Simple bar CSS -->
         <link rel="stylesheet" href="css/simplebar.css">
         <!-- Fonts CSS -->
         <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <!-- Icons CSS -->
         <link rel="stylesheet" href="css/feather.css">
-        <link rel="stylesheet" href="css/select2.css">
-        <link rel="stylesheet" href="css/dropzone.css">
-        <link rel="stylesheet" href="css/uppy.min.css">
-        <link rel="stylesheet" href="css/jquery.steps.css">
-        <link rel="stylesheet" href="css/jquery.timepicker.css">
-        <link rel="stylesheet" href="css/quill.snow.css">
-        <!-- Date Range Picker CSS -->
-        <link rel="stylesheet" href="css/daterangepicker.css">
+        
         <!-- App CSS -->
         <link rel="stylesheet" href="css/app-light.css" id="lightTheme">
       </head>
@@ -90,11 +83,8 @@
                       <a class="nav-link pl-3" href="./contacts.html"><span class="ml-1 item-text">Contacts</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link pl-3" href="./do-not-call-list.html"><span class="ml-1 item-text">DNC List</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link pl-3" href="./caller-id.html"><span class="ml-1 item-text">Caller IDs</span></a>
-                    </li>
+                        <a class="nav-link pl-3" href="./caller-id.html"><span class="ml-1 item-text">Caller IDs</span></a>
+                      </li>
                     <li class="nav-item">
                       <a class="nav-link pl-3" href="./import-contacts.html"><span class="ml-1 item-text">Import Contacts</span></a>
                     </li>
@@ -205,48 +195,62 @@
             </nav>
           </aside>
           <main role="main" class="main-content">
-            <div class="col-md-12 card shadow py-4 px-4">
-                <form action="">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group mb-3">
-                          <label><b>Phonebook</b> </label>
-                          <select class="form-control select2" id="simple-select2">
-                            <optgroup label="Phonebook List">
-                              <option>Phonebook name</option>
-                              <option>Phonebook name</option>
-                            </optgroup>
-                          </select>
+            <div class="row my-0 mx-0">
+              <div class="col auto">
+                    
+                      <div class="form-row">
+                        <div class="form-group col-auto mr-auto">
+                          <label class="ml-3 mr-2 sr-only" for="inlineFormCustomSelectPref1">Show</label>
+                          <label for="search" class="sr-only">Caller Group</label>
+                            <select name="" id="" class="form-control">
+                                <option value="">Group name</option>
+                                <option value="">Group name</option>
+                            </select>
                         </div>
-                      </div> <!-- /.col -->
-                      <div class="col-md-6">
-                          <div class="form-group mb-3">
-                              <label><b>Contact Number</b> </label>
-                              <input type="text" id="simpleinput" class="form-control">
-                          </div>
-                        </div> <!-- /.col -->
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group mb-3">
-                          <label><b>Full name</b> </label>
-                          <input type="text" id="simpleinput" class="form-control">
-                        </div>
-                      </div> <!-- /.col -->
-                      <div class="col-md-6">
-                          <div class="form-group mb-3">
-                              <label><b>Additional Vars</b> </label>
-                              <textarea rows="5" id="simpleinput" class="form-control"></textarea>
-                          </div>
-                        </div> <!-- /.col -->
-                    </div>
-                    <br>
-                    <div class="text-center">
-                        <button class="btn btn-primary"><i class="fe fe-save"></i> Save Contact</button>
-                    </div>
-              </form>
+                      </div>
+                    
+              </div>
+              <div class="col-auto">
+                <a href="./add-caller-id.html" class="btn btn-primary"><span class="fe fe-plus fe-12 mr-2"></span>Add</a>
+              </div>
             </div>
-         
+            <div class="card shadow ml-3 mr-3 ">
+              <table class="table table-hover" id="dataTable-1">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>Area Code</th>
+                      <th>Caller ID Num</th>
+                      <th>Caller ID Name</th>
+                      <th>Date</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input">
+                          <label class="custom-control-label"></label>
+                        </div>
+                      </td>
+                      <td>test data</td>
+                      <td>test data</td>
+                      <td>test data</td>
+                      <td>test data</td>
+                      
+                      <td><button class="btn btn-sm dropdown-toggle more-horizontal" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="text-muted sr-only">Action</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a class="dropdown-item" href="#"><i class="fe fe-edit fe-16"></i> Edit Caller ID</a>
+                          <a class="dropdown-item" href="#"><i class="fe fe-trash fe-16"></i> Delete Caller ID</a>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                </div>
             </main>
     </div>
 
